@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    font-family: 'poppins';
+    scroll-behavior: smooth;
+}
+
+:root {
+
+
+
+  --primary-color: #7065F0;
+  --secondary-color: #2278FD;
+  --title-color: #000;
+  --text-color: rgba(44, 40, 40, 0.842);
+  --body-color: #f3f3f317;
+  --yellow:#FCB810;
+  --linear-gradient:rgb(46 39 39 / 70%);
+
+}
+
+.loginContainer{
+  background: url(/src//assets//loginBg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+
+.buttonComp{
+  padding: .5rem 2.3rem;
+  border: 2px solid var(--text-color);
+  border-radius: 10px;
+  
+  transition: .3s;
+
+}
+
+.buttonComp.primary{
+  color: var(--title-color);
+}
+
+.buttonComp.secondary{
+  background-color: var(--primary-color);
+  color: white;
+  border-color: transparent;
+}
+
+.containerBox {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.containerBox.no{
+  margin: 0 1rem;
+}
+
+
+.buttonComp.primary:hover{
+  background-color: var(--primary-color);
+  color: white;
+  border: 2px solid transparent;
+}
+
+
+.buttonComp.secondary:hover{
+  background-color: transparent;
+  color: var(--title-color);
+  border-color: var(--title-color);
+}
+
+.navListLink::after{
+  content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    display: block;
+    margin: 0 auto;
+    transition: .3s;
+
+}
+
+.navListLink:hover::after{
+  width: 100%;
+}
+
+.navListLink.active::after{
+  width: 100%;
+}
+@media screen and (max-width:1083px){
+  .containerBox{
+    padding: 0 1rem;;
+  }
+}
+
+
+.formAfter{
+  border-bottom: 1px dotted black;
+  padding: 2rem 0;
+
+
+}
+
+.rotateonY:hover{
+  transform: rotateY(360deg);
+  transition: .6s;
+}
+
+
+.Zmin{
+  z-index: 1;
+}
+
+.Zadv{
+  z-index: 8;
+}
+
+.Zmid{
+  z-index: 10;
+}
+
+.Zmax{
+  z-index: 100;
+}
+
+
+.go__wrapper-img img{
+  transform: rotate(45deg);
+  width: 320px;
+  cursor: pointer;
+  
+  
+}
+
+
+
+.go__wrapper-img{
+  width: 350px;
+  height: 350px;
+
+  transform: rotate(-45deg);
+  z-index: 1;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  border-radius: 2rem;
+  
+}
+
+.swiper-button-next,.swiper-button-prev{
+  color: var(--primary-color)
+ 
+ 
+}
+
+.swiper-button-next::after,.swiper-button-prev::after{
+font-size: 2rem;
+}
